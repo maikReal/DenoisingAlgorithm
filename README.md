@@ -1,7 +1,11 @@
 # DenoisingAlgorithm
 Current repository represents denoising algorithm. Current result of algorithm during training on `5 epochs` with `32 batch size` and `50 steps per epoch`: <br>
 
-![Train And Val Losses After 5 Epochs](https://github.com/maikReal/DenoisingAlgorithm/blob/master/results/losses.png)
+![Train And Val Losses After 5 Epochs](https://github.com/maikReal/DenoisingAlgorithm/blob/master/results/losses.png) <br>
+
+I've got the following average `MSE` on `val dataset`: <br>
+
+![Average MSE on val dataset](https://github.com/maikReal/DenoisingAlgorithm/blob/master/results/avg_MSE_on_val.png)
 
 ## Train 
 
