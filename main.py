@@ -110,10 +110,11 @@ def train_model():
 
 
 if __name__ == "__main__":
+    os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
     model = train_model()
 
-    print("HERE")
     if cnf.CHECK_ON_VAL_DATA:
+        
         VALIDATE_FOLDER = cnf.val_folder
 
         CLEAN_VAL = os.path.join(VALIDATE_FOLDER, "clean")
@@ -126,6 +127,7 @@ if __name__ == "__main__":
             all_clean_files, all_noisy_files, batch_size=cnf.val_batch_size
         )
 
+        print('Test on val dataset...')
         preds_metrics = []
         for clean, noisy in val_iter:
 
