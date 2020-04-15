@@ -1,5 +1,7 @@
-FROM python3.8-slim
+FROM python:3.8-alpine
 
-RUN pip3 install librosa soundfile
+RUN pip3 install pydub
 
-RUN python3 script.py
+COPY . /app
+
+CMD python /app/main.py
